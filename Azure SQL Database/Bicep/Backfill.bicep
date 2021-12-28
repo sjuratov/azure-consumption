@@ -358,7 +358,7 @@ resource logic_app_resource 'Microsoft.Logic/workflows@2017-07-01' = {
               'Succeeded'
             ]
           }
-          expression: '@less(variables(\'Counter\'), 0)'
+          expression: '@less(variables(\'Counter\'), 1)'
           limit: {
             count: 60
             timeout: 'PT2M'
