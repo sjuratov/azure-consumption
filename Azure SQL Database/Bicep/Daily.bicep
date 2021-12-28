@@ -155,7 +155,7 @@ resource logic_app_resource 'Microsoft.Logic/workflows@2017-07-01' = {
               {
                 name: 'date'
                 type: 'string'
-                value: '@parameters(\'date\')'
+                value: '@{formatDateTime(addDays(utcNow(),-1),\'yyyy-MM-dd\')}'
               }
             ]
           }
